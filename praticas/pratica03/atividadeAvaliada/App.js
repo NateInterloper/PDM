@@ -19,7 +19,7 @@ export default function App() {
 
     return(
       <Tab.Navigator
-        screenOptions={({ navigation }) => ({ // Parêntese aqui
+        screenOptions={({ navigation }) => ({
           headerRight: ({ tintColor }) => (
             <IconButton
               icon="add"
@@ -28,7 +28,7 @@ export default function App() {
               onPress={() => navigation.navigate('GerenciarDespesa')}
             />
           ),
-        })} // E fecha parêntese aqui
+        })}
       >
 
         <Tab.Screen name="DespesasRecentes" component={DespesaRecente}
