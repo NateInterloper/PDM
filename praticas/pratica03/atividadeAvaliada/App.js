@@ -19,10 +19,17 @@ export default function App() {
 
     return(
       <Tab.Navigator
-      screenOptions={( {navigation} ) => {headerRight: () => <IconButton
-      icon="add" size={24} onPress={() => {
-        navigation.navigate('GerenciarDespesa')
-      }} /> }}>
+        screenOptions={({ navigation }) => ({ // Parêntese aqui
+          headerRight: ({ tintColor }) => (
+            <IconButton
+              icon="add"
+              size={24}
+              color={tintColor} 
+              onPress={() => navigation.navigate('GerenciarDespesa')}
+            />
+          ),
+        })} // E fecha parêntese aqui
+      >
 
         <Tab.Screen name="DespesasRecentes" component={DespesaRecente}
         options={{tabBarIcon: ({color, size}) => (<Ionicons name="hourglass" size={size} color={color} />),
