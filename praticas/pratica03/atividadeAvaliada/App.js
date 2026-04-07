@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import GerenciarDespesa from './screens/GerenciarDespesa';
-import DespesaRecente from './screens/DespesasRecentes';
+import DespesaRecentes from './screens/DespesasRecentes';
 import TodasDespesas from './screens/TodasDespesas';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Ionicons } from '@expo/vector-icons';
@@ -31,7 +31,7 @@ export default function App() {
         })}
       >
 
-        <Tab.Screen name="DespesasRecentes" component={DespesaRecente}
+        <Tab.Screen name="DespesasRecentes" component={DespesaRecentes}
         options={{tabBarIcon: ({color, size}) => (<Ionicons name="hourglass" size={size} color={color} />),
         tabBarLabel: 'Recentes',
         title: 'Despesas Recentes',
