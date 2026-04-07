@@ -10,7 +10,7 @@ function renderDespesaItem(itemData){
     )
 }
 
-function DespesaLista() {
+function DespesaLista({ despesas }) {
     return (
         <FlatList data={despesas}
         renderItem={DespesaItem}

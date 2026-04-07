@@ -4,7 +4,7 @@ function getDataFormatada(data){
     return data.getDate() + '/' + (data.getMonth() + 1) +'/' + data.getFullYear();
 }
 
-function DespesaItem() {
+function DespesaItem({ item }) {
     return (
         <Pressable>
             <View style={StyleSheet.itemContainer}>
